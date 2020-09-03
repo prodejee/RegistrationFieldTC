@@ -13,7 +13,7 @@ describe('Create and marks-unmark as favorite', function () {
 
     context('1. Check CheckBoxes and verify CheckBoxes names.', () => {
         it('All CheckBoxes are checked. CheckBoxes names are as expected.', function () {
-            // RegisterSample.clickCheckBox();            
+            RegisterSample.clickCheckBox();            
             // RegisterSample.verifyCheckBoxName1();
             // RegisterSample.verifyCheckBoxName2();
             // RegisterSample.verifyCheckBoxName3(hob);
