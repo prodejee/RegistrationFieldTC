@@ -1,4 +1,3 @@
-// / <reference types="cypress" />
 
 
 import { Register } from "../../support/Register/register";

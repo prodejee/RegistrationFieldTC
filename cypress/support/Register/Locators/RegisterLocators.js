@@ -22,7 +22,7 @@ export class RegisterLocators {
 
     // Languages 
     static languages = '#basicBootstrapForm > div:nth-child(7) > label';
-    static languageMenu = '.ui-autocomplete-multiselect.ui-state-default.ui-widget';
+    static languageMenu = '#msdd';
     static languageSelector = '.ui-corner-all';
 
     // Skills

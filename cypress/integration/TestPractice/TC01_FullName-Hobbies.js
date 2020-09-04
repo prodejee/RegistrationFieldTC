@@ -1,11 +1,8 @@
-/// <reference types="Cypress" />
-
 const { Register } = require("../../support/Register/Register");
 const { RegisterLocators } = require("../../support/Register/Locators/RegisterLocators");
 
-describe('Registration page TC', () => {
+describe('Registration page TC01', () => {
     before(() => {
-      // pries testa
       cy.visit('http://demo.automationtesting.in/Register.html')
     });
  

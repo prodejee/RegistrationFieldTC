@@ -9,11 +9,11 @@ export class RegisterSample {
     // }
 
     static verifyCheckBoxName1 () {
-        var hobies = [' Cricket ', 'Movies ', 'Hockey'];
+        var hobbies = [' Cricket ', 'Movies ', 'Hockey'];
 
-        cy.get(RegisterSampleLocators.checkBoxName).eq(0).should('have.text', hobies[0]);
-        cy.get(RegisterSampleLocators.checkBoxName).eq(1).should('have.text', hobies[1]);
-        cy.get(RegisterSampleLocators.checkBoxName).eq(2).should('have.text', hobies[2]);
+        cy.get(RegisterSampleLocators.checkBoxName).eq(0).should('have.text', hobbies[0]);
+        cy.get(RegisterSampleLocators.checkBoxName).eq(1).should('have.text', hobbies[1]);
+        cy.get(RegisterSampleLocators.checkBoxName).eq(2).should('have.text', hobbies[2]);
     }
 
     static verifyCheckBoxName2 () {
