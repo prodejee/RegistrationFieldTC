@@ -35,16 +35,19 @@ export class RegisterLocators {
     static selectCountry = '#basicBootstrapForm > div:nth-child(10) > label';
     static selectCountryArrow = '.select2-selection__arrow';
     static selectCountrySearch = '.select2-search__field';
+    static selectCountryBox = '[role=combobox]';
+    static selectCountryText = '#select2-country-container';
+
 
     // Date of Birth
     static year = '#yearbox';
-    static month = '#monthbox';
+    static month = '[placeholder=Month]';
     static day = '#daybox';
     
     // Password
-    static password ='#basicBootstrapForm > div:nth-child(12) > label';
+    static passwordLabel ='#basicBootstrapForm > div:nth-child(12) > label';
     static confirmPass = '#basicBootstrapForm > div:nth-child(13) > label';
-    static firstPasword = '#firstpassword';
+    static firstPassword = '#firstpassword';
     static secondPassword = '#secondpassword';
 
 }
