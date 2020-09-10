@@ -23,7 +23,7 @@ export class RegisterLocators {
     // Languages 
     static languages = '#basicBootstrapForm > div:nth-child(7) > label';
     static languageMenu = '#msdd';
-    static languageSelector = '.ui-corner-all';
+    static languageSelector = '.ui-autocomplete.ui-front.ui-menu li';
 
     // Skills
     static skills = '#basicBootstrapForm > div:nth-child(8) > label';
@@ -38,7 +38,6 @@ export class RegisterLocators {
     static selectCountryBox = '[role=combobox]';
     static selectCountryText = '#select2-country-container';
 
-
     // Date of Birth
     static year = '#yearbox';
     static month = '[placeholder=Month]';
@@ -50,4 +49,22 @@ export class RegisterLocators {
     static firstPassword = '#firstpassword';
     static secondPassword = '#secondpassword';
 
+    // Main Page & Login Screen
+    static signInButton = '#btn1';
+    static loginEmail = '[placeholder="E mail"]';
+    static loginPassword = '[placeholder ="Password"]';
+    static enterButton = '#enterbtn';
+
+    // Page Navbar
+    static navbar = '.navbar-collapse.collapse.navbar-right a';
+
 }
+
+    // Page Navbar buttons
+    export var navButtons = {
+        home: 'Home',
+        register: 'Register',
+        webTable: 'WebTable',
+        switchTo: 'SwitchTo',
+        alerts: 'Alerts'
+    }

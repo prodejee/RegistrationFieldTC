@@ -1,5 +1,7 @@
 import { RegisterLocators } from "./Locators/RegisterLocators";
 
+
+
 // My Class
 export class Register {
     // My Methods
@@ -36,7 +38,7 @@ export class Register {
         cy.get(locator).should('not.be.checked', value).check(value);
     }
 
-    static verifyLabel(locator){
+    static clickLabel(locator){
         cy.get(locator).should('be.visible').click();
     }
 
@@ -50,7 +52,7 @@ export class Register {
     }
 
     static search(locator, text){
-        cy.get(locator).type(text).type('{enter}');
+        cy.get(locator).type(text,).type('{enter}');
     }
 
     static createPassword(){
@@ -69,8 +71,7 @@ export class Register {
     }
 
     static enterPassword(locator){
-        cy.get(locator).type(this.randomPass)
+        cy.get(locator).type(this.randomPass);
     }
-
 }
     

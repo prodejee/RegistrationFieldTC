@@ -25,3 +25,32 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 /// <reference types="Cypress" />
+
+import { RegisterLocators } from "./Register/Locators/RegisterLocators";
+
+Cypress.Commands.add('signIn', ({email, password}) => {
+    cy.visit('http://demo.automationtesting.in/Index.html');
+      cy.on('uncaught:exception', (err) => {
+        expect(err.message).to.include('Website error');
+        return false;
+      });  
+      cy.server();
+      cy.route('GET', 'https://api.mlab.com/api/1/databases/userdetails/collections/usertable?apiKey=YEX0M2QMPd7JWJw_ipMB3a5gDddt4B_X').as("getUserTable");
+      cy.get(RegisterLocators.signInButton).click();
+      cy.wait("@getUserTable");
+      cy.get(RegisterLocators.loginEmail).invoke('val', email);
+      cy.get(RegisterLocators.loginPassword).invoke('val', password);
+      cy.get(RegisterLocators.enterButton).click();
+    });
+
+export class Commands {
+
+    static openPage(button){
+        cy.get(`${RegisterLocators.navbar}:contains(${button})`).click();
+    }
+
+    static openPageFromDrop(button, buttonFromDrop){
+        cy.get(`${RegisterLocators.navbar}:contains(${button})`).click()
+        cy.get(`${RegisterLocators.navbar}:contains(${buttonFromDrop})`).click()
+    }
+}

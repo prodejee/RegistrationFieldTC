@@ -1,10 +1,13 @@
-const { Register } = require("../../support/Register/Register");
-const { RegisterLocators } = require("../../support/Register/Locators/RegisterLocators");
+import { Register } from "../../support/Register/Register";
+import { RegisterLocators, navButtons } from "../../support/Register/Locators/RegisterLocators";
+import { Commands } from "../../support/commands.js";
 
 describe('Registration page TC01', () => {
     before(() => {
         // Preconditions
-      cy.visit('http://demo.automationtesting.in/Register.html')
+        cy.signIn({email: 'a@b.com', password: 'Abc123'});
+        Commands.openPageFromDrop(navButtons.switchTo, navButtons.alerts);
+        Commands.openPage(navButtons.register);        
     });
  
     context(`1. Verify 'First Name' field and enter a value.`, () => {

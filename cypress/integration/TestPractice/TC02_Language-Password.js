@@ -5,14 +5,22 @@ const { RegisterLocators } = require("../../support/Register/Locators/RegisterLo
 describe('Registration page TC02', () => {
     before(() => {
       // Preconditions
-      cy.visit('http://demo.automationtesting.in/Register.html')
+      cy.signIn({email: 'a@b.com', password: 'Abc123'});
     });
  
     context(`1. Verify 'Languages' field and select 'Lithuanian'.`, () => {
         it(`'Languages' field is visible and 'Lithuanian' language is selected.`, () => {
+            var data = {
+                russian: 'Russian',
+                lithuanian: 'Lithuanian',
+                english: 'English'
+            }
+
             Register.verifyElement(RegisterLocators.languageMenu, '');
-            Register.selectFromMenu(RegisterLocators.languageSelector, 'Lithuania');
+            Register.selectFromMenu(RegisterLocators.languageSelector, data.lithuanian);
             Register.verifyLabel(RegisterLocators.languages);
+            // cy.get(`${RegisterLocators.bandymas}:contains(${data.catalan})`).click()
+            // cy.get('.ui-autocomplete.ui-front.ui-menu li').contains(data.arabic);
         });
     });
  
