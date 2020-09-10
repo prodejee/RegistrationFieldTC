@@ -8,4 +8,9 @@ describe('Commit', () => {
             // TODO
         });
     });
+    context(`2. Commit`, () => {
+        it(`TODO`, () => {
+            // TODO
+        });
+    });
 });
