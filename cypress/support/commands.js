@@ -27,6 +27,7 @@
 /// <reference types="Cypress" />
 
 import { RegisterLocators } from "./Register/Locators/RegisterLocators";
+import { CommonLocators } from "./Common/Locators/CommonLocators";
 
 Cypress.Commands.add('signIn', ({email, password}) => {
     cy.visit('http://demo.automationtesting.in/Index.html');
@@ -36,21 +37,21 @@ Cypress.Commands.add('signIn', ({email, password}) => {
       });  
       cy.server();
       cy.route('GET', 'https://api.mlab.com/api/1/databases/userdetails/collections/usertable?apiKey=YEX0M2QMPd7JWJw_ipMB3a5gDddt4B_X').as("getUserTable");
-      cy.get(RegisterLocators.signInButton).click();
+      cy.get(CommonLocators.signInButton).click();
       cy.wait("@getUserTable");
-      cy.get(RegisterLocators.loginEmail).invoke('val', email);
-      cy.get(RegisterLocators.loginPassword).invoke('val', password);
-      cy.get(RegisterLocators.enterButton).click();
+      cy.get(CommonLocators.loginEmail).invoke('val', email);
+      cy.get(CommonLocators.loginPassword).invoke('val', password);
+      cy.get(CommonLocators.enterButton).click();
     });
 
 export class Commands {
 
     static openPage(button){
-        cy.get(`${RegisterLocators.navbar}:contains(${button})`).click();
+        cy.get(`${CommonLocators.navBar}:contains(${button})`).click();
     }
 
     static openPageFromDrop(button, buttonFromDrop){
-        cy.get(`${RegisterLocators.navbar}:contains(${button})`).click()
-        cy.get(`${RegisterLocators.navbar}:contains(${buttonFromDrop})`).click()
+        cy.get(`${CommonLocators.navBar}:contains(${button})`).click()
+        cy.get(`${CommonLocators.navBar}:contains(${buttonFromDrop})`).click()
     }
 }

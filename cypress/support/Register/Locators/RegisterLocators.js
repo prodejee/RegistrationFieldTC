@@ -55,16 +55,4 @@ export class RegisterLocators {
     static loginPassword = '[placeholder ="Password"]';
     static enterButton = '#enterbtn';
 
-    // Page Navbar
-    static navbar = '.navbar-collapse.collapse.navbar-right a';
-
 }
-
-    // Page Navbar buttons
-    export var navButtons = {
-        home: 'Home',
-        register: 'Register',
-        webTable: 'WebTable',
-        switchTo: 'SwitchTo',
-        alerts: 'Alerts'
-    }

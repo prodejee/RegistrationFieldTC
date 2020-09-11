@@ -1,6 +1,7 @@
 import { Register } from "../../support/Register/Register";
-import { RegisterLocators, navButtons } from "../../support/Register/Locators/RegisterLocators";
+import { RegisterLocators } from "../../support/Register/Locators/RegisterLocators";
 import { Commands } from "../../support/commands.js";
+import { navButtons } from "../../support/Common/Locators/CommonLocators";
 
 describe('Registration page TC01', () => {
     before(() => {
