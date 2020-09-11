@@ -18,7 +18,7 @@ describe('Registration page TC02', () => {
 
             Register.verifyElement(RegisterLocators.languageMenu, '');
             Register.selectFromMenu(RegisterLocators.languageSelector, data.lithuanian);
-            Register.verifyLabel(RegisterLocators.languages);
+            Register.clickLabel(RegisterLocators.languages);
             // cy.get(`${RegisterLocators.bandymas}:contains(${data.catalan})`).click()
             // cy.get('.ui-autocomplete.ui-front.ui-menu li').contains(data.arabic);
         });
