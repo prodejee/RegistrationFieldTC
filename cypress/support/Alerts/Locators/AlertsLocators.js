@@ -4,7 +4,9 @@ export class AlertsLocators {
     // Alert Buttons
     static buttonOk = '.btn.btn-danger';
     static buttonOkCancel = '.btn.btn-primary';
+    static buttonOkCancelMsg = '#demo';
     static buttonTextBox = '.btn.btn-info'; 
+    static buttonTextBoxMsg = '#demo1'
 
     // Alerts NavBar
     static navBarAlerts = '.nav.nav-tabs.nav-stacked a'
@@ -24,5 +26,5 @@ export var alertTab = {
 export var buttonText = {
     firstBtn: '    click the button to display an  alert box:\n\n                        ',
     secondBtn: 'click the button to display a confirm box ',
-    thirdBtn: 'click the button to demonstrate the prompt box'
+    thirdBtn: 'click the button to demonstrate the prompt box '
 }
